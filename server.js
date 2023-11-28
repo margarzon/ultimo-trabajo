@@ -4,6 +4,7 @@ const colors = require ('colors')
 const connectDB = require ('./config/db')
 const  bootcampsRoutes = require ('./routes/bootcampsRoutes')
 const coursesRoutes = require('./routes/coursesRoutes')
+const usersRoutes = require ('./routes/usersRoutes')
 
 //establecer config
 
@@ -30,8 +31,7 @@ app.get('/prueba', (req, res)=>{
 app.use('/bootcamps',
     bootcampsRoutes)
 
-app.use('/courses',
-    coursesRoutes)
+app.use('/auth' ,  usersRoutes )
 
 
 //Ruta del recurso reseñas
